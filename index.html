@@ -22,9 +22,9 @@
     }
   </style>
 </head>
-<body class="bg-default h-screen poppins">
+<body class="bg-default h-screen poppins flex flex-col gap-10">
   <header class="w-3/4 mx-auto relative">
-    <nav class="navbar bg-base-100 border border-gray-100 rounded-lg px-6 py-5 absolute top-4">
+    <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-6 py-5 relative top-4">
       <img class="cursor-pointer" src="./assets/logo.png" alt="logo">
       <div class="flex-1">
         <a class="btn btn-ghost text-4xl font-normal">Dev<span class="font-bold -ml-[5px]">Board</span></a>
@@ -41,7 +41,38 @@
       </div>
     </nav>
   </header>
-  <main></main>
+  <main class="w-3/4 mx-auto h-4/5 flex gap-8">
+    <section class="w-3/4 bg-white h-full px-4">
+      <div class="grid grid-cols-4 h-1/4 justify-center items-center gap-20">
+        <div class="bg-default flex items-center justify-center h-[128px] w-[263px] rounded-lg gap-4">
+          <div>
+            <img src="./assets/checkbox.png" alt="checkbox">
+          </div>
+          <div>
+            <h2 class="text-sl">Task Assigned</h2>
+            <strong class="text-3xl">05</strong>
+          </div>
+        </div>
+        <div class="col-span-2">
+          <div class="flex items-center bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] h-[128px] rounded-lg">
+            <img class="w-16" src="./assets/board.png" alt="">
+            <h1 class="font-medium text-white text-2xl">Discover something new today!</h1>
+          </div>
+        </div>
+        <div class="bg-default flex items-center justify-center h-[128px] rounded-lg -ml-14 gap-4">
+          <div>
+            <img src="./assets/calender.png" alt="calendar">
+          </div>
+          <div>
+            <h2>Wed,</h2>
+            <strong class="text-2xl">Feb 28, 2025</strong>
+          </div>
+        </div>
+      </div>
+      <div></div>
+    </section>
+    <section class="w-1/4 bg-white h-full"></section>
+  </main>
 
   <script src="./scripts/script.js"></script>
 </body>

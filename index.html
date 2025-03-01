@@ -4,11 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dev Board</title>
+  <!-- daisyUI and TailwindCSS -->
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    /* Brand Colors */
+    .bg-default {
+      background-color: #F4F7FF;
+    }
+    /* Font Class */
+    .poppins {
+      font-family: "Poppins", sans-serif;
+    }
+  </style>
 </head>
-<body>
-  <header></header>
+<body class="bg-default h-screen poppins">
+  <header class="w-3/4 mx-auto relative">
+    <nav class="navbar bg-base-100 border border-gray-100 rounded-lg px-6 py-5 absolute top-4">
+      <img class="cursor-pointer" src="./assets/logo.png" alt="logo">
+      <div class="flex-1">
+        <a class="btn btn-ghost text-4xl font-normal">Dev<span class="font-bold -ml-[5px]">Board</span></a>
+      </div>
+        <div class="flex items-center justify-center gap-6">
+          <button class="btn bg-[#47698F] text-black bg-default border-none rounded-full p-6">
+            <img src="./assets/checkbox.png" alt="">
+            <span class="font-bold text-2xl">23</span>
+          </button>
+          <div>
+            <img id="btn-random-bg-color" class="p-3 rounded-full bg-default cursor-pointer" src="./assets/theme-btn.png" alt="theme button">
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
   <main></main>
 
   <script src="./scripts/script.js"></script>

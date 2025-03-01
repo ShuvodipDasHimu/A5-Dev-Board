@@ -16,14 +16,23 @@
     .bg-default {
       background-color: #F4F7FF;
     }
+    .accent {
+      background-color: #3752FD;
+      color:white;
+    }
     /* Font Class */
     .poppins {
       font-family: "Poppins", sans-serif;
     }
+    /* Horizontal Line Dotted */
+    hr{
+      border-top:2px dashed rgba(55, 82, 253, 0.2);
+    }
   </style>
 </head>
-<body class="bg-default h-screen poppins flex flex-col gap-10">
-  <header class="w-3/4 mx-auto relative">
+<body class="bg-default h-screen poppins flex flex-col gap-8">
+  <header class="w-4/5 mx-auto relative">
+    <!-- Navigation Section -->
     <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-6 py-5 relative top-4">
       <img class="cursor-pointer" src="./assets/logo.png" alt="logo">
       <div class="flex-1">
@@ -41,7 +50,8 @@
       </div>
     </nav>
   </header>
-  <main class="w-3/4 mx-auto h-4/5 flex gap-8">
+  <main class="w-4/5 mx-auto h-5/6 flex gap-8">
+    <!-- Task Completion Section -->
     <section class="w-3/4 bg-white h-full px-4">
       <div class="grid grid-cols-4 h-1/4 justify-center items-center gap-20">
         <div class="bg-default flex items-center justify-center h-[128px] w-[263px] rounded-lg gap-4">
@@ -69,9 +79,109 @@
           </div>
         </div>
       </div>
-      <div></div>
+      <hr class="relative -top-4">
+      <div class="grid grid-cols-3 p-2 gap-4 relative -top-2">
+        <!-- First Grid -->
+        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
+          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C]">ShopEase</span>
+          <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
+          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+          <hr class="mt-2">
+          <div class="flex justify-between mt-3">
+            <div>
+              <h2 class="text-gray-500">Deadline</h2>
+              <h2>21 March 2025</h2>
+            </div>
+            <div>
+              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- Second Grid -->
+        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
+          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C]">CloudSync</span>
+          <h1 class="font-medium text-xl">Add Dark Mode</h1>
+          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Store the user's preference in localStorage, update CSS...</span>
+          <hr class="mt-2">
+          <div class="flex justify-between mt-3">
+            <div>
+              <h2 class="text-gray-500">Deadline</h2>
+              <h2>22 March 2025</h2>
+            </div>
+            <div>
+              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- Third Grid -->
+        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
+          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C] justify-center">SwiftPay</span>
+          <h1 class="font-medium text-xl">Optimize  Home page</h1>
+          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+          <hr class="mt-2">
+          <div class="flex justify-between mt-3">
+            <div>
+              <h2 class="text-gray-500">Deadline</h2>
+              <h2>23 March 2025</h2>
+            </div>
+            <div>
+              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- Fourth Grid -->
+        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
+          <span class="bg-white p-4 w-20 h-10 flex items-center rounded-lg text-[#00303C] justify-center">Meta</span>
+          <h1 class="font-medium text-xl">Add new emoji 🤲</h1>
+          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+          <hr class="mt-2">
+          <div class="flex justify-between mt-3">
+            <div>
+              <h2 class="text-gray-500">Deadline</h2>
+              <h2>24 March 2025</h2>
+            </div>
+            <div>
+              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- Fifth Grid -->
+        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
+          <span class="bg-white p-4 pr-2 w-28 h-10 flex items-center rounded-lg text-[#00303C]">Google LLC</span>
+          <h1 class="font-medium text-xl">Integrate OpenAI API</h1>
+          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+          <hr class="mt-2">
+          <div class="flex justify-between mt-3">
+            <div>
+              <h2 class="text-gray-500">Deadline</h2>
+              <h2>25 March 2025</h2>
+            </div>
+            <div>
+              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+            </div>
+          </div>
+        </div>
+        <!-- Sixth Grid -->
+        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
+          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C]">Glassdoor</span>
+          <h1 class="font-medium text-xl">Improve Job searching</h1>
+          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+          <hr class="mt-2">
+          <div class="flex justify-between mt-3">
+            <div>
+              <h2 class="text-gray-500">Deadline</h2>
+              <h2>26 March 2025</h2>
+            </div>
+            <div>
+              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="w-1/4 bg-white h-full"></section>
+    <!-- Task Activity Section -->
+    <section class="w-1/4 bg-white h-full">
+    </section>
   </main>
 
   <script src="./scripts/script.js"></script>

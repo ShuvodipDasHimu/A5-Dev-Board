@@ -52,7 +52,7 @@
   </header>
   <main class="w-4/5 mx-auto h-5/6 flex gap-8">
     <!-- Task Completion Section -->
-    <section class="w-3/4 bg-white h-full px-4">
+    <section class="w-3/4 bg-white h-full px-4 rounded-lg">
       <div class="grid grid-cols-4 h-1/4 justify-center items-center gap-20">
         <div class="bg-default flex items-center justify-center h-[128px] w-[263px] rounded-lg gap-4">
           <div>
@@ -180,8 +180,19 @@
       </div>
     </section>
     <!-- Task Activity Section -->
-    <section class="w-1/4 bg-white h-full">
-    </section>
+    <aside class="w-1/4 bg-white h-full text-center py-6 flex flex-col gap-3 rounded-lg">
+      <div class="flex items-center justify-center gap-4">
+        <img src="./assets/activity.png" alt="Activity">
+        <h1>Activity Log</h1>
+      </div>
+      <div>
+        <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Clear History</button>
+      </div>
+      <hr>
+    </aside>
+    <!-- <section class="w-1/4 bg-white h-full">
+      <aside></aside>
+    </section> -->
   </main>
 
   <script src="./scripts/script.js"></script>

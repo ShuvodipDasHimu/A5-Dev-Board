@@ -38,7 +38,7 @@ for(let i = 0; i < tasksAssignedBtns.length; i++){
     const newMessage = document.createElement("p");
     newMessage.textContent = messageFormat;
 
-    newMessage.classList.add("bg-default", "p-2", "w-[90%]", "self-center", "rounded-lg", "font-medium", "poppins");
+    newMessage.classList.add("bg-default", "p-4", "w-[90%]", "self-center", "rounded-lg", "font-medium", "poppins", "text-left", "text-md");
 
     activityLog.appendChild(newMessage);
   })
@@ -83,4 +83,13 @@ randomBgColorBtn.addEventListener('click', function(){
   document.body.style.backgroundColor = randomColor;
 
   document.body.classList.remove('bg-default');
+})
+
+document.getElementById('discover-card').addEventListener('click', function(){
+  window.location.href = 'blogs.html';
+})
+
+
+document.getElementById('main-page').addEventListener('click', function(){
+  window.location.href = 'index.html';
 })

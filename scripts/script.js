@@ -12,6 +12,9 @@ for(let i = 0; i < tasksAssignedBtns.length; i++){
     let remainingTaskNumber = parseInt(remainingTaskElement.innerText);
     if(remainingTaskNumber > 0){
       remainingTaskElement.innerText = remainingTaskNumber - 1;
+      if(remainingTaskElement.innerText === "0"){
+        alert("Congratulations! You have completed all the current tasks!");
+      }
     }
     
     const totalTaskElement = document.getElementById("total-completed-tasks");
@@ -22,7 +25,12 @@ for(let i = 0; i < tasksAssignedBtns.length; i++){
 
     const taskTitle = tasksAssignedBtns[i].closest(".bg-default").querySelector("h1").textContent;
 
-    const currentTime = new Date().toLocaleString();
+    const currentTime = new Date().toLocaleString('en-US', {
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
 
     const activityLog = document.getElementById("activity-logs");
     const messageFormat = `You have completed the task ${taskTitle} at ${currentTime}`;
@@ -30,7 +38,7 @@ for(let i = 0; i < tasksAssignedBtns.length; i++){
     const newMessage = document.createElement("p");
     newMessage.textContent = messageFormat;
 
-    newMessage.classList.add("bg-default", "p-2", "w-[90%]", "self-center", "rounded-lg");
+    newMessage.classList.add("bg-default", "p-2", "w-[90%]", "self-center", "rounded-lg", "font-medium", "poppins");
 
     activityLog.appendChild(newMessage);
   })
@@ -45,9 +53,10 @@ clearHistoryBtn.addEventListener("click", function(){
 const currentDate = new Date();
 
 const formattedDate = currentDate.toLocaleDateString('en-US', {
+  weekday: 'short',
   month: 'long',
   day: 'numeric',
-  year: 'numeric'
+  year: 'numeric',
 })
 
 const liveDateElement = document.getElementById("current-date");

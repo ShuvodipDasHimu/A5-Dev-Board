@@ -41,7 +41,7 @@
         <div class="flex items-center justify-center gap-6">
           <button class="btn bg-[#47698F] text-black bg-default border-none rounded-full p-6">
             <img src="./assets/checkbox.png" alt="">
-            <span class="font-bold text-2xl">23</span>
+            <span class="font-bold text-2xl" id="total-completed-tasks">23</span>
           </button>
           <div>
             <img id="btn-random-bg-color" class="p-3 rounded-full bg-default cursor-pointer" src="./assets/theme-btn.png" alt="theme button">
@@ -60,22 +60,21 @@
           </div>
           <div>
             <h2 class="text-sl">Task Assigned</h2>
-            <strong class="text-3xl">05</strong>
+            <strong id="remaining-tasks" class="text-3xl">6</strong>
           </div>
         </div>
         <div class="col-span-2">
-          <div class="flex items-center bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] h-[128px] rounded-lg">
-            <img class="w-16" src="./assets/board.png" alt="">
-            <h1 class="font-medium text-white text-2xl">Discover something new today!</h1>
+          <div class="flex items-center justify-center bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] h-[128px] rounded-lg">
+            <img class="w-24" src="./assets/board.png" alt="">
+            <h1 class="font-medium text-white text-xl">Discover something new today!</h1>
           </div>
         </div>
         <div class="bg-default flex items-center justify-center h-[128px] rounded-lg -ml-14 gap-4">
           <div>
             <img src="./assets/calender.png" alt="calendar">
           </div>
-          <div>
-            <h2>Wed,</h2>
-            <strong class="text-2xl">Feb 28, 2025</strong>
+          <div> 
+            <strong class="text-2xl" id="current-date">Feb 28, 2025</strong>
           </div>
         </div>
       </div>
@@ -93,7 +92,7 @@
               <h2>21 March 2025</h2>
             </div>
             <div>
-              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
             </div>
           </div>
         </div>
@@ -109,7 +108,7 @@
               <h2>22 March 2025</h2>
             </div>
             <div>
-              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
             </div>
           </div>
         </div>
@@ -125,7 +124,7 @@
               <h2>23 March 2025</h2>
             </div>
             <div>
-              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
             </div>
           </div>
         </div>
@@ -141,7 +140,7 @@
               <h2>24 March 2025</h2>
             </div>
             <div>
-              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
             </div>
           </div>
         </div>
@@ -157,7 +156,7 @@
               <h2>25 March 2025</h2>
             </div>
             <div>
-              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
             </div>
           </div>
         </div>
@@ -173,28 +172,29 @@
               <h2>26 March 2025</h2>
             </div>
             <div>
-              <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Task Activity Section -->
-    <aside class="w-1/4 bg-white h-full text-center py-6 flex flex-col gap-3 rounded-lg">
+    <aside id="activity-log" class="w-1/4 bg-white h-full text-center py-6 flex flex-col gap-3 rounded-lg">
       <div class="flex items-center justify-center gap-4">
         <img src="./assets/activity.png" alt="Activity">
         <h1>Activity Log</h1>
       </div>
       <div>
-        <button class="btn border-none accent rounded-lg font-medium py-6 px-7">Clear History</button>
+        <button id="clear-history-btn" class="btn border-none accent rounded-lg font-medium py-6 px-7">Clear History</button>
       </div>
       <hr>
+      <div id="activity-logs" class="flex items-center flex-col justify-center gap-4">
+      </div>
     </aside>
     <!-- <section class="w-1/4 bg-white h-full">
       <aside></aside>
     </section> -->
   </main>
-
   <script src="./scripts/script.js"></script>
 </body>
 </html>

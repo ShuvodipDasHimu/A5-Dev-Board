@@ -30,170 +30,172 @@
     }
   </style>
 </head>
-<body class="bg-default h-screen poppins flex flex-col gap-8">
-  <header class="w-4/5 mx-auto relative">
+<body class="bg-default min-h-screen poppins flex flex-col gap-6 pb-8">
+  <header class="w-full max-w-6xl mx-auto px-4 sm:px-6 relative">
     <!-- Navigation Section -->
-    <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-6 py-5 relative top-4">
-      <img class="cursor-pointer" src="./assets/logo.png" alt="logo">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-4xl font-normal">Dev<span class="font-bold -ml-[5px]">Board</span></a>
+    <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-4 sm:px-6 py-3 sm:py-5 relative top-4 flex-wrap gap-2">
+      <img class="cursor-pointer w-8 h-8 sm:w-auto sm:h-auto" src="./assets/logo.png" alt="logo">
+      <div class="flex-1 min-w-0">
+        <a class="btn btn-ghost text-2xl sm:text-4xl font-normal">Dev<span class="font-bold -ml-[3px] sm:-ml-[5px]">Board</span></a>
       </div>
-        <div class="flex items-center justify-center gap-6">
-          <button class="btn bg-[#47698F] text-black bg-default border-none rounded-full p-6">
-            <img src="./assets/checkbox.png" alt="">
-            <span class="font-bold text-2xl" id="total-completed-tasks">23</span>
+        <div class="flex items-center justify-center gap-3 sm:gap-6">
+          <button class="btn bg-[#47698F] text-black bg-default border-none rounded-full px-4 py-2 sm:p-6">
+            <img src="./assets/checkbox.png" alt="" class="w-4 h-4 sm:w-auto sm:h-auto">
+            <span class="font-bold text-lg sm:text-2xl" id="total-completed-tasks">23</span>
           </button>
           <div>
-            <img id="btn-random-bg-color" class="p-3 rounded-full bg-default cursor-pointer" src="./assets/theme-btn.png" alt="theme button">
+            <img id="btn-random-bg-color" class="p-2 sm:p-3 rounded-full bg-default cursor-pointer w-10 h-10 sm:w-auto sm:h-auto" src="./assets/theme-btn.png" alt="theme button">
           </div>
         </div>
       </div>
     </nav>
   </header>
-  <main class="w-4/5 mx-auto h-5/6 flex gap-8">
+  <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-6 mt-4">
     <!-- Task Completion Section -->
-    <section class="w-3/4 bg-white h-full px-4 rounded-lg">
-      <div class="grid grid-cols-4 h-1/4 justify-center items-center gap-20">
-        <div class="bg-default flex items-center justify-center h-[128px] w-[263px] rounded-lg gap-4">
+    <section class="w-full lg:w-3/4 bg-white px-4 sm:px-6 py-4 rounded-lg">
+      <!-- Stats Bar -->
+      <div class="flex flex-wrap justify-between items-center gap-4 py-4 mb-2">
+        <!-- Task Assigned -->
+        <div class="bg-default flex items-center justify-center px-6 py-4 rounded-lg gap-4 flex-1 min-w-[160px]">
           <div>
-            <img src="./assets/checkbox.png" alt="checkbox">
+            <img src="./assets/checkbox.png" alt="checkbox" class="w-8 h-8">
           </div>
           <div>
-            <h2 class="text-sl">Task Assigned</h2>
+            <h2 class="text-sm text-gray-600">Task Assigned</h2>
             <strong id="remaining-tasks" class="text-3xl">6</strong>
           </div>
         </div>
-        <div class="col-span-2 cursor-pointer" id="discover-card">
-          <div class="flex items-center justify-center bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] h-[128px] rounded-lg">
-            <img class="w-24" src="./assets/board.png" alt="">
-            <h1 class="font-medium text-white text-xl">Discover something new today!</h1>
+        <!-- Discover Card -->
+        <div class="flex-[2] min-w-[200px] cursor-pointer" id="discover-card">
+          <div class="flex items-center justify-center bg-gradient-to-tr from-[#3752FD] to-[#9BA8F8] py-8 px-4 rounded-lg gap-3">
+            <img class="w-14 sm:w-20" src="./assets/board.png" alt="">
+            <h1 class="font-medium text-white text-base sm:text-lg">Discover something new today!</h1>
           </div>
         </div>
-        <div class="bg-default flex items-center justify-center h-[128px] rounded-lg -ml-14 gap-4">
+        <!-- Date -->
+        <div class="bg-default flex items-center justify-center px-6 py-4 rounded-lg gap-4 flex-1 min-w-[160px]">
           <div>
-            <img src="./assets/calender.png" alt="calendar">
+            <img src="./assets/calender.png" alt="calendar" class="w-8 h-8">
           </div>
-          <div> 
-            <h1 class="text-lg font-medium" id="current-date"></h1>
+          <div>
+            <h1 class="text-base font-medium" id="current-date"></h1>
           </div>
         </div>
       </div>
-      <hr class="relative -top-4">
-      <div class="grid grid-cols-3 p-2 gap-4 relative -top-2">
+      <hr class="mb-4">
+      <!-- Task Cards Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 pb-4">
         <!-- First Grid -->
-        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
-          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C]">ShopEase</span>
-          <h1 class="font-medium text-xl">Fix Mobile Button Issue</h1>
-          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+        <div class="bg-default p-6 flex flex-col gap-2 rounded-lg">
+          <span class="bg-white p-3 w-28 h-9 flex items-center rounded-lg text-[#00303C] text-sm">ShopEase</span>
+          <h1 class="font-medium text-lg">Fix Mobile Button Issue</h1>
+          <span class="bg-white px-4 py-3 flex items-start text-gray-400 rounded-lg text-sm min-h-[60px]">Debug using Chrome DevTools, check for overlapping</span>
           <hr class="mt-2">
-          <div class="flex justify-between mt-3">
+          <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
             <div>
-              <h2 class="text-gray-500">Deadline</h2>
-              <h2>21 March 2025</h2>
+              <h2 class="text-gray-500 text-sm">Deadline</h2>
+              <h2 class="font-medium">21 March 2025</h2>
             </div>
             <div>
-              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-2 px-5">Completed</button>
             </div>
           </div>
         </div>
         <!-- Second Grid -->
-        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
-          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C]">CloudSync</span>
-          <h1 class="font-medium text-xl">Add Dark Mode</h1>
-          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Store the user's preference in localStorage, update CSS...</span>
+        <div class="bg-default p-6 flex flex-col gap-2 rounded-lg">
+          <span class="bg-white p-3 w-28 h-9 flex items-center rounded-lg text-[#00303C] text-sm">CloudSync</span>
+          <h1 class="font-medium text-lg">Add Dark Mode</h1>
+          <span class="bg-white px-4 py-3 flex items-start text-gray-400 rounded-lg text-sm min-h-[60px]">Store the user's preference in localStorage, update CSS...</span>
           <hr class="mt-2">
-          <div class="flex justify-between mt-3">
+          <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
             <div>
-              <h2 class="text-gray-500">Deadline</h2>
-              <h2>22 March 2025</h2>
+              <h2 class="text-gray-500 text-sm">Deadline</h2>
+              <h2 class="font-medium">22 March 2025</h2>
             </div>
             <div>
-              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-2 px-5">Completed</button>
             </div>
           </div>
         </div>
         <!-- Third Grid -->
-        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
-          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C] justify-center">SwiftPay</span>
-          <h1 class="font-medium text-xl">Optimize  Home page</h1>
-          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+        <div class="bg-default p-6 flex flex-col gap-2 rounded-lg">
+          <span class="bg-white p-3 w-28 h-9 flex items-center rounded-lg text-[#00303C] text-sm justify-center">SwiftPay</span>
+          <h1 class="font-medium text-lg">Optimize Home page</h1>
+          <span class="bg-white px-4 py-3 flex items-start text-gray-400 rounded-lg text-sm min-h-[60px]">Debug using Chrome DevTools, check for overlapping</span>
           <hr class="mt-2">
-          <div class="flex justify-between mt-3">
+          <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
             <div>
-              <h2 class="text-gray-500">Deadline</h2>
-              <h2>23 March 2025</h2>
+              <h2 class="text-gray-500 text-sm">Deadline</h2>
+              <h2 class="font-medium">23 March 2025</h2>
             </div>
             <div>
-              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-2 px-5">Completed</button>
             </div>
           </div>
         </div>
         <!-- Fourth Grid -->
-        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
-          <span class="bg-white p-4 w-20 h-10 flex items-center rounded-lg text-[#00303C] justify-center">Meta</span>
-          <h1 class="font-medium text-xl">Add new emoji 🤲</h1>
-          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+        <div class="bg-default p-6 flex flex-col gap-2 rounded-lg">
+          <span class="bg-white p-3 w-16 h-9 flex items-center rounded-lg text-[#00303C] text-sm justify-center">Meta</span>
+          <h1 class="font-medium text-lg">Add new emoji 🤲</h1>
+          <span class="bg-white px-4 py-3 flex items-start text-gray-400 rounded-lg text-sm min-h-[60px]">Debug using Chrome DevTools, check for overlapping</span>
           <hr class="mt-2">
-          <div class="flex justify-between mt-3">
+          <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
             <div>
-              <h2 class="text-gray-500">Deadline</h2>
-              <h2>24 March 2025</h2>
+              <h2 class="text-gray-500 text-sm">Deadline</h2>
+              <h2 class="font-medium">24 March 2025</h2>
             </div>
             <div>
-              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-2 px-5">Completed</button>
             </div>
           </div>
         </div>
         <!-- Fifth Grid -->
-        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
-          <span class="bg-white p-4 pr-2 w-28 h-10 flex items-center rounded-lg text-[#00303C]">Google LLC</span>
-          <h1 class="font-medium text-xl">Integrate OpenAI API</h1>
-          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+        <div class="bg-default p-6 flex flex-col gap-2 rounded-lg">
+          <span class="bg-white p-3 w-28 h-9 flex items-center rounded-lg text-[#00303C] text-sm">Google LLC</span>
+          <h1 class="font-medium text-lg">Integrate OpenAI API</h1>
+          <span class="bg-white px-4 py-3 flex items-start text-gray-400 rounded-lg text-sm min-h-[60px]">Debug using Chrome DevTools, check for overlapping</span>
           <hr class="mt-2">
-          <div class="flex justify-between mt-3">
+          <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
             <div>
-              <h2 class="text-gray-500">Deadline</h2>
-              <h2>25 March 2025</h2>
+              <h2 class="text-gray-500 text-sm">Deadline</h2>
+              <h2 class="font-medium">25 March 2025</h2>
             </div>
             <div>
-              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-2 px-5">Completed</button>
             </div>
           </div>
         </div>
         <!-- Sixth Grid -->
-        <div class="bg-default p-8 flex flex-col h-[280px] w-[342px] gap-2 rounded-lg">
-          <span class="bg-white p-4 w-28 h-10 flex items-center rounded-lg text-[#00303C]">Glassdoor</span>
-          <h1 class="font-medium text-xl">Improve Job searching</h1>
-          <span class="bg-white px-4 py-10 h-16 flex items-center text-gray-400 rounded-lg">Debug using Chrome DevTools, check for overlapping</span>
+        <div class="bg-default p-6 flex flex-col gap-2 rounded-lg">
+          <span class="bg-white p-3 w-28 h-9 flex items-center rounded-lg text-[#00303C] text-sm">Glassdoor</span>
+          <h1 class="font-medium text-lg">Improve Job searching</h1>
+          <span class="bg-white px-4 py-3 flex items-start text-gray-400 rounded-lg text-sm min-h-[60px]">Debug using Chrome DevTools, check for overlapping</span>
           <hr class="mt-2">
-          <div class="flex justify-between mt-3">
+          <div class="flex justify-between items-center mt-3 flex-wrap gap-2">
             <div>
-              <h2 class="text-gray-500">Deadline</h2>
-              <h2>26 March 2025</h2>
+              <h2 class="text-gray-500 text-sm">Deadline</h2>
+              <h2 class="font-medium">26 March 2025</h2>
             </div>
             <div>
-              <button class="btn-completed btn border-none accent rounded-lg font-medium py-6 px-7">Completed</button>
+              <button class="btn-completed btn border-none accent rounded-lg font-medium py-2 px-5">Completed</button>
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Task Activity Section -->
-    <aside id="activity-log" class="w-1/4 bg-white h-full text-center py-6 flex flex-col gap-3 rounded-lg">
+    <aside id="activity-log" class="w-full lg:w-1/4 bg-white text-center py-6 flex flex-col gap-3 rounded-lg">
       <div class="flex items-center justify-center gap-4">
         <img src="./assets/activity.png" alt="Activity">
-        <h1>Activity Log</h1>
+        <h1 class="font-semibold text-lg">Activity Log</h1>
       </div>
       <div>
-        <button id="clear-history-btn" class="btn border-none accent rounded-lg font-medium py-6 px-7">Clear History</button>
+        <button id="clear-history-btn" class="btn border-none accent rounded-lg font-medium py-2 px-7">Clear History</button>
       </div>
       <hr>
-      <div id="activity-logs" class="flex items-center flex-col justify-center gap-7">
+      <div id="activity-logs" class="flex items-center flex-col justify-start gap-4 px-2 overflow-y-auto max-h-[400px] lg:max-h-none">
       </div>
     </aside>
-    <!-- <section class="w-1/4 bg-white h-full">
-      <aside></aside>
-    </section> -->
   </main>
   <script src="./scripts/script.js"></script>
 </body>

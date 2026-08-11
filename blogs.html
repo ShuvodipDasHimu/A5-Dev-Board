@@ -30,49 +30,49 @@
     }
   </style>
 </head>
-<body class="bg-default h-screen poppins flex flex-col gap-8">
-  <header class="w-4/5 mx-auto relative">
+<body class="bg-default min-h-screen poppins flex flex-col gap-6 pb-10">
+  <header class="w-full max-w-6xl mx-auto px-4 sm:px-6 relative">
     <!-- Navigation Section -->
-    <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-6 py-5 relative top-4">
-      <img class="cursor-pointer" src="./assets/logo.png" alt="logo">
-      <div class="flex-1">
-        <a class="btn btn-ghost text-4xl font-normal">Dev<span class="font-bold -ml-[5px]">Board</span></a>
+    <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-4 sm:px-6 py-3 sm:py-5 relative top-4">
+      <img class="cursor-pointer w-8 h-8 sm:w-auto sm:h-auto" src="./assets/logo.png" alt="logo">
+      <div class="flex-1 min-w-0">
+        <a class="btn btn-ghost text-2xl sm:text-4xl font-normal">Dev<span class="font-bold -ml-[3px] sm:-ml-[5px]">Board</span></a>
       </div>
       <div>
-        <button id="main-page" class="btn accent rounded-lg px-5 py-6 text-lg">Back to Desk</button>
+        <button id="main-page" class="btn accent rounded-lg px-4 sm:px-5 py-2 sm:py-6 text-base sm:text-lg">Back to Desk</button>
       </div>
     </nav>
   </header>
-  <main class="w-4/5 mx-auto flex flex-col gap-6">
-    <h1 class="text-center font-bold text-2xl">Blogs</h1>
-    <div class="bg-white px-4 py-6 flex flex-col gap-3">
-      <h1 class="text-xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+  <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col gap-4 mt-4">
+    <h1 class="text-center font-bold text-xl sm:text-2xl">Blogs</h1>
+    <div class="bg-white px-4 sm:px-6 py-5 flex flex-col gap-3 rounded-lg">
+      <h1 class="text-lg sm:text-xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
       <hr>
-      <p class="text-gray-600 text-lg">getElementById, getElementsByClassName, QuerySelector and QuerySelectorAll can be used to select an element in the DOM</p>
+      <p class="text-gray-600 text-sm sm:text-base md:text-lg">getElementById, getElementsByClassName, QuerySelector and QuerySelectorAll can be used to select an element in the DOM</p>
     </div>
 
-    <div class="bg-white px-4 py-6 flex flex-col gap-3">
-      <h1 class="text-xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
+    <div class="bg-white px-4 sm:px-6 py-5 flex flex-col gap-3 rounded-lg">
+      <h1 class="text-lg sm:text-xl font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h1>
       <hr>
-      <p class="text-gray-600 text-lg">innerHTML means HTML code with tags, innerText means text inside an element and textContent is a node's contents</p>
+      <p class="text-gray-600 text-sm sm:text-base md:text-lg">innerHTML means HTML code with tags, innerText means text inside an element and textContent is a node's contents</p>
     </div>
 
-    <div class="bg-white px-4 py-6 flex flex-col gap-3">
-      <h1 class="text-xl font-bold">Question-3: What is event delegation in the DOM?</h1>
+    <div class="bg-white px-4 sm:px-6 py-5 flex flex-col gap-3 rounded-lg">
+      <h1 class="text-lg sm:text-xl font-bold">Question-3: What is event delegation in the DOM?</h1>
       <hr>
-      <p class="text-gray-600 text-lg">Event Delegation is a technique where you attach a single event listener to a parent element to manage events on its child elements.</p>
+      <p class="text-gray-600 text-sm sm:text-base md:text-lg">Event Delegation is a technique where you attach a single event listener to a parent element to manage events on its child elements.</p>
     </div>
 
-    <div class="bg-white px-4 py-6 flex flex-col gap-3">
-      <h1 class="text-xl font-bold">Question-4: What is event bubbling in the DOM?</h1>
+    <div class="bg-white px-4 sm:px-6 py-5 flex flex-col gap-3 rounded-lg">
+      <h1 class="text-lg sm:text-xl font-bold">Question-4: What is event bubbling in the DOM?</h1>
       <hr>
-      <p class="text-gray-600 text-lg"> Event bubbling in JavaScript refers to the way events are handled and propagated through the different elements of a webpage.</p>
+      <p class="text-gray-600 text-sm sm:text-base md:text-lg"> Event bubbling in JavaScript refers to the way events are handled and propagated through the different elements of a webpage.</p>
     </div>
 
-    <div class="bg-white px-4 py-6 flex flex-col gap-3">
-      <h1 class="text-xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+    <div class="bg-white px-4 sm:px-6 py-5 flex flex-col gap-3 rounded-lg">
+      <h1 class="text-lg sm:text-xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
       <hr>
-      <p class="text-gray-600 text-lg">I can create element with createElement, add with appendChild & remove with remove() or removeChild()</p>
+      <p class="text-gray-600 text-sm sm:text-base md:text-lg">I can create element with createElement, add with appendChild & remove with remove() or removeChild()</p>
     </div>
   </main>
   <script>

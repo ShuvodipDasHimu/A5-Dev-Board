@@ -33,22 +33,21 @@
 <body class="bg-default min-h-screen poppins flex flex-col gap-6 pb-8">
   <header class="w-full max-w-6xl mx-auto px-4 sm:px-6 relative">
     <!-- Navigation Section -->
-    <nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-4 sm:px-6 py-3 sm:py-5 relative top-4 flex-wrap gap-2">
-      <img class="cursor-pointer w-8 h-8 sm:w-auto sm:h-auto" src="./assets/logo.png" alt="logo">
-      <div class="flex-1 min-w-0">
-        <a class="btn btn-ghost text-2xl sm:text-4xl font-normal">Dev<span class="font-bold -ml-[3px] sm:-ml-[5px]">Board</span></a>
-      </div>
-        <div class="flex items-center justify-center gap-3 sm:gap-6">
-          <button class="btn bg-[#47698F] text-black bg-default border-none rounded-full px-4 py-2 sm:p-6">
-            <img src="./assets/checkbox.png" alt="" class="w-4 h-4 sm:w-auto sm:h-auto">
-            <span class="font-bold text-lg sm:text-2xl" id="total-completed-tasks">23</span>
-          </button>
-          <div>
-            <img id="btn-random-bg-color" class="p-2 sm:p-3 rounded-full bg-default cursor-pointer w-10 h-10 sm:w-auto sm:h-auto" src="./assets/theme-btn.png" alt="theme button">
-          </div>
-        </div>
-      </div>
-    </nav>
+<nav class="navbar bg-base-100 border border-gray-100 rounded-2xl px-3 sm:px-6 py-3 sm:py-5 relative top-4 gap-2 sm:gap-4">
+  <img class="cursor-pointer w-7 h-7 sm:w-auto sm:h-auto shrink-0" src="./assets/logo.png" alt="logo">
+  <div class="flex-1 min-w-0">
+    <a class="btn btn-ghost px-1 sm:px-4 text-xl sm:text-4xl font-normal whitespace-nowrap">Dev<span class="font-bold -ml-[3px] sm:-ml-[5px]">Board</span></a>
+  </div>
+  <div class="flex items-center justify-center gap-2 sm:gap-6 shrink-0">
+    <button class="btn bg-[#47698F] text-black bg-default border-none rounded-full px-3 py-2 sm:p-6">
+      <img src="./assets/checkbox.png" alt="" class="w-4 h-4 sm:w-auto sm:h-auto">
+      <span class="font-bold text-base sm:text-2xl" id="total-completed-tasks">23</span>
+    </button>
+    <div>
+      <img id="btn-random-bg-color" class="p-2 sm:p-3 rounded-full bg-default cursor-pointer w-9 h-9 sm:w-auto sm:h-auto" src="./assets/theme-btn.png" alt="theme button">
+    </div>
+  </div>
+</nav>
   </header>
   <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 flex flex-col lg:flex-row gap-6 mt-4">
     <!-- Task Completion Section -->
